@@ -15,7 +15,7 @@ public class InteiroPositivo {
             this.valor = valor;
         }                                                                  
                                                                                                                                                   
-        public Integer ehInteiro (int valor) {                                                                                                 
+        public Integer ehInteiro(int valor) {                                                                                                 
             if(Integer.parseInt(valor)) {                                                                                            
                 return valor;                                                                                                     
             } else {                                                                                    
@@ -24,8 +24,8 @@ public class InteiroPositivo {
         } 
 
         public boolen ehPrimo () {                                                                                                      
-            for (int i=1; i<valor; i++) {                                                                                             
-                if(valor%i==0) {                                                                                                  
+            for (int i=2; i<valor; i++) {                                                                                             
+                if(valor%i==0 || valor%i==1) {                                                                                                  
                     return true;                                                                                              
                 } else {                                                                                                          
                     return false;                                                                                             
