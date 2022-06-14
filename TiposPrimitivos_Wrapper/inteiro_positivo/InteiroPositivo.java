@@ -15,7 +15,7 @@ public class InteiroPositivo {
             this.valor = valor;
         }                                                                  
                                                                                                                                                   
-        public ehInteiro (int valor) {                                                                                                 
+        public Integer ehInteiro (int valor) {                                                                                                 
             if(valor%2==0 || valor%3==1) {                                                                                            
                 return valor;                                                                                                     
             } else {                                                                                    
@@ -23,7 +23,7 @@ public class InteiroPositivo {
             }                                                                                                                         
         } 
 
-        public boolen ehPrimo () {                                                                                                      
+        public Boolen ehPrimo () {                                                                                                      
             for (int i=1; i<valor; i++) {                                                                                             
                 if(valor%i==0 ) {                                                                                                  
                     return true;                                                                                              
