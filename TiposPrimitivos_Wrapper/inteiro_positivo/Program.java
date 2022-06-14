@@ -1,29 +1,54 @@
-public class InteiroPositivo {
-	public static void main (String[] args) {
-		private int valor;
+public class Program {
+	public static void main(String[] args) {
+		try {
+			InteiroPositivo inteiroPositivo = new InteiroPositivo("1");
+			System.out.println(inteiroPositivo.getValor() + " - " + inteiroPositivo.ehPrimo());
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		}
 
-		public InteiroPositivo (int valor) {
-			this.valor = Integer.valueOf(valor);
+		InteiroPositivo inteiroPositivo1 = null;
+
+		try {
+			inteiroPositivo1 = new InteiroPositivo("43");
+			System.out.println(inteiroPositivo1.getValor() + " - " + inteiroPositivo1.ehPrimo());
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
 		}
-		public InteiroPositivo (String valor) {
-			this.valor = Integer.parseInt(valor);
+
+		try {
+			inteiroPositivo1.setValor(-1);
+			System.out.println(inteiroPositivo1.getValor() + " - " + inteiroPositivo1.ehPrimo());
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
 		}
-		public ehInteiro (int valor) {
-			try (Integer.parseInt(valor)) {
-				System.out.println("Valor eh um valor inteiro positivo");
-			} catch (IllegalArgumentException e) {
-				System.out.println("Valor nao eh um valor inteiro positivo");
-			}
+
+		try {
+			inteiroPositivo1.setValor(inteiroPositivo1.getValor() + 1);
+			System.out.println(inteiroPositivo1.getValor() + " - " + inteiroPositivo1.ehPrimo());
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
 		}
-		Public ehPrimo (int valor) {
-			for (int i=2; i<valor; i++) {
-				if(valor%i==0) {
-					return true;
-				} else {
-					return false;
-				}
-			}
+
+		try {
+			InteiroPositivo inteiroPositivo = new InteiroPositivo("-3");
+			System.out.println(inteiroPositivo.getValor() + " - " + inteiroPositivo.ehPrimo());
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		}
+
+		try {
+			InteiroPositivo inteiroPositivo = new InteiroPositivo(379);
+			System.out.println(inteiroPositivo.getValor() + " - " + inteiroPositivo.ehPrimo());
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		}
+
+		try {
+			InteiroPositivo inteiroPositivo = new InteiroPositivo(378);
+			System.out.println(inteiroPositivo.getValor() + " - " + inteiroPositivo.ehPrimo());
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
 		}
 	}
 }
-
