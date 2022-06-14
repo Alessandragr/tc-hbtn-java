@@ -16,16 +16,16 @@ public class InteiroPositivo {
         }                                                                  
                                                                                                                                                   
         public Integer ehInteiro (int valor) {                                                                                                 
-            if(valor%2==0 || valor%3==1) {                                                                                            
+            if(Integer.parseInt(valor)) {                                                                                            
                 return valor;                                                                                                     
             } else {                                                                                    
                 thow new IllegalArgumentException("Valor nao eh um valor inteiro positivo");                                                     
             }                                                                                                                         
         } 
 
-        public Boolen ehPrimo () {                                                                                                      
+        public boolen ehPrimo () {                                                                                                      
             for (int i=1; i<valor; i++) {                                                                                             
-                if(valor%i==0 ) {                                                                                                  
+                if(valor%i==0) {                                                                                                  
                     return true;                                                                                              
                 } else {                                                                                                          
                     return false;                                                                                             
