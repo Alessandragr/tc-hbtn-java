@@ -27,6 +27,6 @@ public class InteiroPositivo {
                 return false;                                                                                             
             }                                                                                                                 
         } 
-        return true;                                                                                                                        
+        return false;                                                                                                                        
     }                                                                                                                                
 }                                                                                                                                         
