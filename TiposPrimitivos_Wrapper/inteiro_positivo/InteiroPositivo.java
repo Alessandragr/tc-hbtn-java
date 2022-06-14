@@ -1,6 +1,6 @@
 public class InteiroPositivo {                                                                                                                    
     public static void main (String[] args) {                                                                                                 
-        public int valor;                                                                                                                
+        private int valor;                                                                                                                
                                                                                                                                                   
         public InteiroPositivo (int valor) {                                                                                              
             this.valor = Integer.valueOf(valor);                                                                                      
