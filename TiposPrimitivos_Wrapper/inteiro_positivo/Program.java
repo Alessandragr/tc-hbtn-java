@@ -1,7 +1,7 @@
 public class InteiroPositivo {
 	public static void main(String[] args) {
 		 try {
-			 int valor;
+			 private int valor;
 			 public Numero (int valor) {
 				  Integer valor =  new Integer(2);
 				  ehInteiro();
@@ -10,13 +10,13 @@ public class InteiroPositivo {
 				 Integer valor =  new Integer("2");
 				 ehInteiro();
 			 }
-		 } catch (Exception e) {
+		 } catch (IllegalArgumentException e) {
 			 System.out.println(e);
 		 }
 		 public ehInteiro (int valor) {
-			 if (Integer.parseInt(valor)) {
+			 try (Integer.parseInt(valor)) {
 				 System.out.println("Valor eh um valor inteiro positivo");
-			 } else {
+			 } catch (IllegalArgumentException e) {
 				 System.out.println("Valor nao eh um valor inteiro positivo");
 			 }
 		 }
