@@ -20,13 +20,11 @@ public class InteiroPositivo {
     }                                                                                                                                                                                                          
 
     public boolean ehPrimo () {                                                                                                      
-        for (int i=2; i<valor; i++) {                                                                                             
-            if(valor%i==0 || valor%i==1) {                                                                                                  
-                return true;                                                                                              
-            } else {                                                                                                          
-                return false;                                                                                             
-            }                                                                                                                 
+        for (int i=2; i<valor-1; i++) {                                                                                             
+            if(valor%i==0) {                                                                                                  
+                return false;                                                                                              
+            }                                                                                                               
         } 
-        return false;                                                                                                                        
+        return true;                                                                                                                        
     }                                                                                                                                
 }                                                                                                                                         
