@@ -1,6 +1,5 @@
-public class InteiroPositivo {                                                                                                                    
-    public static void main (String[] args) {                                                                                                 
-        private int valor;                                                                                                                
+public class InteiroPositivo {                                                                                                                                                                                                                    
+        private int valor;                                                                                               
                                                                                                                                                   
         public InteiroPositivo (int valor) {                                                                                              
             this.valor = Integer.valueOf(valor);                                                                                      
@@ -23,7 +22,7 @@ public class InteiroPositivo {
             }                                                                                                                         
         } 
 
-        public boolen ehPrimo () {                                                                                                      
+        public boolean ehPrimo () {                                                                                                      
             for (int i=2; i<valor; i++) {                                                                                             
                 if(valor%i==0 || valor%i==1) {                                                                                                  
                     return true;                                                                                              
@@ -32,5 +31,4 @@ public class InteiroPositivo {
                 }                                                                                                                 
             }                                                                                                                         
         }                                                                                                                                
-    } 
-}                                                                                                                                        
+}                                                                                                                                         
