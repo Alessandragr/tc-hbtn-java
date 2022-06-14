@@ -23,9 +23,9 @@ public class InteiroPositivo {
             }                                                                                                                         
         } 
 
-        public boolen ehPrimo (int valor) {                                                                                                      
+        public boolen ehPrimo () {                                                                                                      
             for (int i=2; i<valor; i++) {                                                                                             
-                if(valor%i==0) {                                                                                                  
+                if(valor%i==0 ) {                                                                                                  
                     return true;                                                                                              
                 } else {                                                                                                          
                     return false;                                                                                             
