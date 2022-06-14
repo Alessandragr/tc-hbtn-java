@@ -1,6 +1,6 @@
 public class InteiroPositivo {                                                                                                                    
     public static void main (String[] args) {                                                                                                 
-        private int valor;                                                                                                                
+        public int valor;                                                                                                                
                                                                                                                                                   
         public InteiroPositivo (int valor) {                                                                                              
             this.valor = Integer.valueOf(valor);                                                                                      
@@ -16,7 +16,7 @@ public class InteiroPositivo {
         }                                                                  
                                                                                                                                                   
         public ehInteiro (int valor) {                                                                                                 
-            if(valor istanceOf Integer) {                                                                                            
+            if(valor%2==0 || valor%3==1) {                                                                                            
                 return valor;                                                                                                     
             } else {                                                                                    
                 thow new IllegalArgumentException("Valor nao eh um valor inteiro positivo");                                                     
@@ -24,7 +24,7 @@ public class InteiroPositivo {
         } 
 
         public boolen ehPrimo () {                                                                                                      
-            for (int i=2; i<valor; i++) {                                                                                             
+            for (int i=1; i<valor; i++) {                                                                                             
                 if(valor%i==0 ) {                                                                                                  
                     return true;                                                                                              
                 } else {                                                                                                          
