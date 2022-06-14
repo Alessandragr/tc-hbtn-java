@@ -15,7 +15,7 @@ public class InteiroPositivo {
         }                                                                  
                                                                                                                                                   
         public int ehInteiro(int valor) {                                                                                                 
-            if(Integer.parseInt(valor >= 0)) {                                                                                            
+            if(Integer.parseInt(valor) && valor >= 0) {                                                                                            
                 return valor;                                                                                                     
             } else {                                                                                    
                 throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");                                                     
