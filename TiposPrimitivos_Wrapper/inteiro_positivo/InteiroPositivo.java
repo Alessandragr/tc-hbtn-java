@@ -19,7 +19,7 @@ public class InteiroPositivo {
             if(Integer.parseInt(valor)) {                                                                                            
                 return valor;                                                                                                     
             } else {                                                                                    
-                thow new IllegalArgumentException("Valor nao eh um valor inteiro positivo");                                                     
+                throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");                                                     
             }                                                                                                                         
         } 
 
