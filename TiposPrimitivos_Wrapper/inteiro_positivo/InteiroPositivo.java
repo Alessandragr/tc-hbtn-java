@@ -9,20 +9,20 @@ public class InteiroPositivo {
     }
     public int getValor() {
         return valor;
-        ehInteiro();
-    }
-    public int setValor(int valor) {
-        this.valor = valor;
-        ehInteiro();
-    }                                                                  
-                                                                                                                                                  
-    public int ehInteiro(int valor) {                                                                                                 
         if(valor >= 0) {                                                                                            
             return valor;                                                                                                     
         } else {                                                                                    
             throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");                                                     
-        }                                                                                                                         
-    } 
+        } 
+    }
+    public int setValor(int valor) {
+        this.valor = valor;
+        if(valor >= 0) {                                                                                            
+            return valor;                                                                                                     
+        } else {                                                                                    
+            throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");                                                     
+        } 
+    }                                                                                                                                                                                                          
 
     public boolean ehPrimo () {                                                                                                      
         for (int i=2; i<valor; i++) {                                                                                             
