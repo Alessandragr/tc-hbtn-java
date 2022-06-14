@@ -12,18 +12,18 @@ public class InteiroPositivo {
             return valor;
         }
         public int setValor(int valor) {
-            this.valor = valor
+            this.valor = valor;
         }                                                                  
                                                                                                                                                   
-        public ehInteiro (Object valor) {                                                                                                 
+        public ehInteiro (int valor) {                                                                                                 
             if(valor istanceOf Integer) {                                                                                            
                 return valor;                                                                                                     
-            } catch (IllegalArgumentException e) {                                                                                    
-                System.out.println("Valor nao eh um valor inteiro positivo");                                                     
-                }                                                                                                                         
-            } 
+            } else {                                                                                    
+                thow new IllegalArgumentException("Valor nao eh um valor inteiro positivo");                                                     
+            }                                                                                                                         
+        } 
 
-        Public ehPrimo (int valor) {                                                                                                      
+        public ehPrimo (int valor) {                                                                                                      
             for (int i=2; i<valor; i++) {                                                                                             
                 if(valor%i==0) {                                                                                                  
                     return true;                                                                                              
