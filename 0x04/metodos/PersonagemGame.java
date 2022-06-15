@@ -20,21 +20,19 @@ public class PersonagemGame {
     }
 
     public int tomarDano (int quantidadeDeDano) {
-        int saudeAtual = this.saudeAtual;
-        if(saudeAtual<=0) {
+        this.saudeAtual -= quantidadeDeDano;
+        if(this.saudeAtual<=0) {
             return 0;
         } else {
-            saudeAtual -= quantidadeDeDano;
-            return saudeAtual;
+            return this.saudeAtual;
         }
     }
     public int receberCura (int quantidadeDeCura) {
-        int saudeAtual = this.saudeAtual;
-        if(saudeAtual>=100) {
+        this.saudeAtual += quantidadeDeCura;
+        if(this.saudeAtual>=100) {
             return 100
         } else {
-            saudeAtual += quantidadeDeCura;
-            return saudeAtual;
+            return this.saudeAtual;
         }
     }
     
