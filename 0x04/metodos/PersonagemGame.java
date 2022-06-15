@@ -22,7 +22,7 @@ public class PersonagemGame {
     public int tomarDano (int quantidadeDeDano) {
         this.saudeAtual -= quantidadeDeDano;
         if(this.saudeAtual<=0) {
-            return 0;
+            return this.saudeAtual=0;
         } else {
             return this.saudeAtual;
         }
@@ -30,7 +30,7 @@ public class PersonagemGame {
     public int receberCura (int quantidadeDeCura) {
         this.saudeAtual += quantidadeDeCura;
         if(this.saudeAtual>=100) {
-            return 100;
+            return this.saudeAtual=100;
         } else {
             return this.saudeAtual;
         }
