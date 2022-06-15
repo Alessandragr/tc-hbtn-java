@@ -20,20 +20,21 @@ public class PersonagemGame {
     }
 
     public int tomarDano (int quantidadeDeDano) {
-        if(this.saudeAtual>=0) {
-            this.saudeAtual -= quantidadeDeDano;
-            return this.saudeAtual;
+        int saudeAtual = this.saudeAtual;
+        if(saudeAtual<=0) {
+            return 0;
         } else {
-            throw new IllegalArgumentException("Valor inválido");
+            saudeAtual -= quantidadeDeDano;
+            return saudeAtual;
         }
     }
     public int receberCura (int quantidadeDeCura) {
-        if(this.saudeAtual<=100) {
-            this.saudeAtual += quantidadeDeCura;
-            return this.saudeAtual;
-
+        int saudeAtual = this.saudeAtual;
+        if(saudeAtual>=100) {
+            return 100
         } else {
-            throw new IllegalArgumentException("Valor inválido");
+            saudeAtual += quantidadeDeCura;
+            return saudeAtual;
         }
     }
     
