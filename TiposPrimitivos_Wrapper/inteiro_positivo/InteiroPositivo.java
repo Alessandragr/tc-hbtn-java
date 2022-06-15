@@ -23,12 +23,13 @@ public class InteiroPositivo {
         } 
     }                                                                                                                                                                                                          
 
-    public boolean ehPrimo () {                                                                                                      
+    public boolean ehPrimo ( ) {
+        int valor = this.getValor();                                                                                                      
         for (int i=2; i<valor-1; i++) {                                                                                             
-            if(valor%i==0 || valor%i==1) {                                                                                                  
-                return true;                                                                                              
+            if(valor%i==0) {                                                                                                  
+                return false;                                                                                              
             }                                                                                                               
         } 
-        return false;                                                                                                                        
+        return true;                                                                                                                        
     }                                                                                                                                
 }                                                                                                                                         
