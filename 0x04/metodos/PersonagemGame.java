@@ -30,7 +30,7 @@ public class PersonagemGame {
     public int receberCura (int quantidadeDeCura) {
         this.saudeAtual += quantidadeDeCura;
         if(this.saudeAtual>=100) {
-            return 100
+            return 100;
         } else {
             return this.saudeAtual;
         }
