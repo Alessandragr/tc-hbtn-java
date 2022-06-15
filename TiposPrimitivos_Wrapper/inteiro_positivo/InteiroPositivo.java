@@ -4,8 +4,10 @@ public class InteiroPositivo {
     public InteiroPositivo (int valor) {                                                                                              
         this.valor = Integer.valueOf(valor);                                                                                      
     }                                                                                                                                 
-    public InteiroPositivo (String valor) {                                                                                           
-        this.valor = Integer.parseInt(valor);                                                                                     
+    public InteiroPositivo (String valor) {  
+        int valorNovo = Integer.parseInt(valor);  
+        this.setValor(valorNovo);                                                                                      
+                                                                                           
     }
     public int getValor() {
         return valor;
