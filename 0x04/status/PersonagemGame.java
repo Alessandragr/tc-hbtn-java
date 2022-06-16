@@ -8,7 +8,7 @@ public class PersonagemGame {
         return this.saudeAtual;
     }
 
-    public String setSaudeAtual(int saudeAtual) {
+    public void setSaudeAtual(int saudeAtual) {
         this.saudeAtual = saudeAtual;
         if (this.saudeAtual>0) {
             this.status = "vivo";
@@ -26,8 +26,9 @@ public class PersonagemGame {
         this.nome = nome;
     }
 
-    public void String getStatus() {
-        getSaudeAtual();
+    public String getStatus() {
+        setSaudeAtual();
+        return this.status;
     }
 
     public int tomarDano (int quantidadeDeDano) {
