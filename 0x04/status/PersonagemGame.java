@@ -26,24 +26,23 @@ public class PersonagemGame {
     }
 
     public String getStatus() {
-        setSaudeAtual();
         return this.status;
     }
 
-    public int tomarDano (int quantidadeDeDano) {
-        this.saudeAtual -= quantidadeDeDano;
-        if(this.saudeAtual<=0) {
-            return this.saudeAtual=0;
+    public void tomarDano (int quantidadeDeDano) {
+        int saudeAtual -= quantidadeDeDano;
+        if(saudeAtual<=0) {
+            setSaudeAtual(0);
         } else {
-            return this.saudeAtual;
+            setSaudeAtual(saudeAtual);
         }
     }
-    public int receberCura (int quantidadeDeCura) {
-        this.saudeAtual += quantidadeDeCura;
-        if(this.saudeAtual>=100) {
-            return this.saudeAtual=100;
+    public void receberCura (int quantidadeDeCura) {
+        int saudeAtual += quantidadeDeCura;
+        if(saudeAtual>=100) {
+            setSaudeAtual(100);
         } else {
-            return this.saudeAtual;
+            setSaudeAtual(saudeAtual);
         }
     }
    
