@@ -26,7 +26,7 @@ public class PersonagemGame {
         this.nome = nome;
     }
 
-    public String getStatus() {
+    public void String getStatus() {
         getSaudeAtual();
     }
 
