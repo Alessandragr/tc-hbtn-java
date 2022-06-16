@@ -4,7 +4,7 @@ public class PersonagemGame {
     private String status;
 
     public PersonagemGame(int saudeAtual, String nome) {
-        setSaudeAtual();
+        setSaudeAtual(saudeAtual);
     }
 
     public int getSaudeAtual() {
@@ -44,7 +44,7 @@ public class PersonagemGame {
             setSaudeAtual(saudeAtual);
         }
     }
-    
+
     public void receberCura (int quantidadeDeCura) {
         this.saudeAtual = this.saudeAtual + quantidadeDeCura;
         if(this.saudeAtual>=100) {
