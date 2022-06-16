@@ -30,16 +30,16 @@ public class PersonagemGame {
     }
 
     public void tomarDano (int quantidadeDeDano) {
-        int saudeAtual = (saudeAtual - quantidadeDeDano);
-        if(saudeAtual<=0) {
+        this.saudeAtual = (this.saudeAtual - quantidadeDeDano);
+        if(this.saudeAtual<=0) {
             setSaudeAtual(0);
         } else {
             setSaudeAtual(saudeAtual);
         }
     }
     public void receberCura (int quantidadeDeCura) {
-        int saudeAtual = saudeAtual + quantidadeDeCura;
-        if(saudeAtual>=100) {
+        this.saudeAtual = this.saudeAtual + quantidadeDeCura;
+        if(this.saudeAtual>=100) {
             setSaudeAtual(100);
         } else {
             setSaudeAtual(saudeAtual);
