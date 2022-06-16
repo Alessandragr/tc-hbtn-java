@@ -12,7 +12,7 @@ public class Empregado {
     }
 
    public void apresentar() {
-    System.out.println( "Codigo: " + this.codigo + "\n" + "Nome: " + this.nome + "\n" + 
+    System.out.print("Codigo: " + this.codigo + "\n" + "Nome: " + this.nome + "\n" + 
             "Bairro: " + endereco.getBairro() + "\n" + "Cidade: " + endereco.getCidade() + "\n" + "Pais: " + endereco.getPais()
     		);
    }
