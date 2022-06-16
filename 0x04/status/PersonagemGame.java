@@ -15,7 +15,6 @@ public class PersonagemGame {
         } else {
             this.status = "morto";
         }
-        return this.status;
     }
 
     public String getNome() {
