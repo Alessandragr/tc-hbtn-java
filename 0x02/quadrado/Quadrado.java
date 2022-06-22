@@ -4,7 +4,7 @@ public class Quadrado {
             double calculo = lado*lado;
             return calculo;
         } else {
-            throw new java.lang.IllegalArgumentException("Lado deve possuir valor positivo");
+            throw new IllegalArgumentException("Lado deve possuir valor positivo");
         }
     }
 }
