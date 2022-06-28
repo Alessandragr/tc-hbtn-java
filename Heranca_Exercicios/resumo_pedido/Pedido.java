@@ -30,7 +30,8 @@ public class Pedido {
         System.out.println("------- RESUMO PEDIDO -------");
 
         for (ItemPedido itemPedido : itemPedidos) {
-            System.out.println("Tipo: " + itemPedido.getClass().getSimpleName()  +
+            Produto produto = itemPedido.getProduto();
+            System.out.println("Tipo: " + produto.getClass().getSimpleName() +
                     String.format("  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f", itemPedido.getProduto().getTitulo(),
                             itemPedido.getProduto().obterPrecoLiquido(), itemPedido.getQuantidade(),
                             itemPedido.getProduto().obterPrecoLiquido()*itemPedido.getQuantidade()));
