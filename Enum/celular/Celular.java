@@ -23,7 +23,7 @@ public class Celular {
         if (obterPosicaoContato(contatoAntigo.getNome())==-1)
             throw new IllegalArgumentException("Nao foi possivel modificar contato. Contato nao existe");
 
-            if(obterPosicaoContato(novoContato.getNome())==1 && !contatoAntigo.getNome().equals(novoContato.getNome()))
+            if(obterPosicaoContato(contatoAntigo.getNome())==1 && !contatoAntigo.getNome().equals(novoContato.getNome()))
                 throw new IllegalArgumentException("Nao foi possivel modificar contato. Contato jah existente com esse nome");
             contatos.set(obterPosicaoContato(contatoAntigo.getNome()), novoContato);
             // contatos.set(contatos.indexOf(contatoAntigo), novoContato);
@@ -36,11 +36,11 @@ public class Celular {
         }
     }
 
-    public void removerContato(Contato contato) {
-        if (obterPosicaoContato(contato.getNome())==-1) {
+    public  void removerContato(Contato contato) {
+        int retorno = obterPosicaoContato(contato.getNome());
+        if(retorno != -1){
+            contatos.remove(retorno);
+        }else
             throw new IllegalArgumentException("Nao foi possivel remover contato. Contato nao existe");
-        } else {
-            contatos.remove(contato);
-        }
     }
 }
