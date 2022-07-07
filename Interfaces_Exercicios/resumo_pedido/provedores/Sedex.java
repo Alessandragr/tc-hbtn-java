@@ -10,7 +10,7 @@ public class Sedex implements ProvedorFrete {
         if(peso>1000) {
             total = valor*0.10;
         } else {
-            total = valor*0.5;
+            total = valor*0.05;
         }
         return (new Frete(total, TipoProvedorFrete.SEDEX));
     }
