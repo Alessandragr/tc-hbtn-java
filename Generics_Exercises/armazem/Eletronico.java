@@ -10,7 +10,7 @@ public class Eletronico {
 
     @Override
     public String toString() {
-        String retorno = "[ " + getDescricao() + "] " + "R$ " + String.format("%f", getValor());
+        String retorno = "[" + getDescricao() + "] " + "R$ " + String.format("%f", getValor());
         return retorno;
     }
 
