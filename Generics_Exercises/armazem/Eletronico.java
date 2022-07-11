@@ -1,0 +1,24 @@
+public class Eletronico {
+
+    private String descricao;
+    private  double valor;
+
+    public Eletronico(String descricao, double valor) {
+        this.descricao = descricao;
+        this.valor = valor;
+    }
+
+    @Override
+    public String toString() {
+        String retorno = "[ " + getDescricao() + "] " + "R$ " + String.format("%f", getValor());
+        return retorno;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+}
