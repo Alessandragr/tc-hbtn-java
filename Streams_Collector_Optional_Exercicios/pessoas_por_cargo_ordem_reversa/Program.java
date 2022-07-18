@@ -2,6 +2,8 @@ import java.util.*;
 
 public class Program {
     public static void main(String[] args) {
+    	final var locale = new Locale("pt", "BR"); 
+    	Locale.setDefault(locale);
         Pessoa pessoa1 = new Pessoa(1, "John Bannins", "Desenvolvedor", 23, 3200);
         Pessoa pessoa2 = new Pessoa(2, "Derry Collier", "Desenvolvedor", 45, 8600);
         Pessoa pessoa3 = new Pessoa(3, "Mikey Berg", "Product Owner", 51, 11350);
