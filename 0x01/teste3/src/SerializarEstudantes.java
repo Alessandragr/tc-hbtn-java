@@ -1,62 +1,52 @@
 
+import java.io.*;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
-public class Pessoa implements Comparable<Pessoa> {
-    private int codigo;
-    private String nome;
-    private String cargo;
-    private int idade;
-    private double salario;
+public class SerializarEstudantes<Estudante>  {
+    private String nomeArquivo;
 
-    private List<String> hobbies;
+    private List<Estudante> estudantesLista = new ArrayList<>();
 
-    public Pessoa(int codigo, String nome, String cargo, int idade, double salario, List<String> hobbies) {
-        this.codigo = codigo;
-        this.nome = nome;
-        this.cargo = cargo;
-        this.idade = idade;
-        this.salario = salario;
-        this.hobbies = hobbies;
+    public SerializarEstudantes(String nomeArquivo) {
+        this.nomeArquivo = nomeArquivo;
     }
 
-    @Override
-    public String toString() {
-        return String.format("[%d] %s %s %d R$ %.6f", getCodigo(), getNome(), getCargo(), getIdade(), getSalario());
+    public void serializar(List<Estudante> estudantes) {
+        File arquivo = new File(nomeArquivo);
+        try {
+            arquivo.delete();
+            arquivo.createNewFile();
+
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(arquivo));
+            objectOutputStream.writeObject(estudantes);
+            objectOutputStream.close();
+        } catch (IOException e) {
+            System.out.println("Nao foi possivel serializar");
+        }
+    }
+    @SuppressWarnings("unchecked")
+    public List<Estudante> desserializar() {
+        List<Estudante> estudanteArrayList = new ArrayList<>();
+
+        try {
+            File arquivo = new File(nomeArquivo);
+
+                ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(arquivo));
+                estudanteArrayList = (List<Estudante>) objectInputStream.readObject();
+                objectInputStream.close();
+
+        } catch(Exception ex ) {
+            System.out.println("Nao foi possivel desserializar");
+        }
+        return estudanteArrayList;
     }
 
-    public int getCodigo() {
-        return codigo;
+    public String getNomeArquivo() {
+        return nomeArquivo;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public String getCargo() {
-        return cargo;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public double getSalario() {
-        return salario;
-    }
-
-
-    public List<String> getHobbies() {
-        return hobbies;
-    }
-
-    public void setHobbies(List<String> hobbies) {
-        this.hobbies = hobbies;
-    }
-
-    @Override
-    public int compareTo(Pessoa pessoa) {
-        return nome.compareTo(pessoa.getNome());
+    public void setNomeArquivo(String nomeArquivo) {
+        this.nomeArquivo = nomeArquivo;
     }
 }

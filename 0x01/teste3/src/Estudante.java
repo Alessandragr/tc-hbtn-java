@@ -1,38 +1,44 @@
+import java.io.Serializable;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class ConsultaPessoas {
+public class Estudante implements Serializable {
+    private int idade;
+    private String nome;
+    private transient String senha;
 
-    public static TreeMap<String, TreeSet<Pessoa>> obterPessoasAgrupadasPorCargoEmOrdemReversa(List<Pessoa> todasPessoas) {
-        TreeMap<String, TreeSet<Pessoa>> treeSetTreeMap = todasPessoas.stream()
-                .collect(Collectors.groupingBy(Pessoa::getCargo, () -> new TreeMap<>(Comparator.reverseOrder()),
-                Collectors.toCollection(TreeSet::new)));
-
-        return treeSetTreeMap;
+    public Estudante(int idade, String nome, String senha) {
+        this.idade = idade;
+        this.nome = nome;
+        this.senha = senha;
     }
 
-    public static Map<String, Long> obterContagemPessoasPorCargo(List<Pessoa> pessoas) {
-        Map<String, Long> longMap = pessoas.stream()
-                .collect(Collectors.groupingBy(Pessoa::getCargo, Collectors.counting()));
-        return longMap;
+    @Override
+    public String toString() {
+        return "Estudante { nome='" + getNome() + "', idade='" + getIdade() + "', senha='" + getSenha() + "' }";
     }
 
-    public static Map<String, Map<Integer, Long>> obterContagemPessoasPorCargoEIdade(List<Pessoa> pessoa) {
-        Map<String, Map<Integer, Long>> stringMap = pessoa.stream()
-                .collect(Collectors.groupingBy(Pessoa::getCargo, Collectors.groupingBy(Pessoa::getIdade, Collectors.counting())));
-        return stringMap;
+    public int getIdade() {
+        return idade;
     }
 
-    public static Map<String, Double> obterMediaSalarioPorCargo(List<Pessoa> pessoa) {
-
-        Map<String, Double> doubleMap = pessoa.stream()
-                .collect(Collectors.groupingBy(Pessoa::getCargo, Collectors.averagingDouble(Pessoa::getSalario)));
-                return doubleMap;
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 
-    public static Map<String, TreeSet<String>> obterHobbiesPorCargo(List<Pessoa> pessoa) {
-        Map<String, TreeSet<String>> stringTreeSetMap = pessoa.stream()
-                .collect(Collectors.groupingBy(Pessoa::getCargo, Collectors.flatMapping(pessoaHobby -> pessoaHobby.getHobbies().stream(), Collectors.toCollection(TreeSet::new))));
-        return stringTreeSetMap;
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 }
