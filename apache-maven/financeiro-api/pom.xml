@@ -7,8 +7,9 @@
   <groupId>com.techcamps.financeiro</groupId>
   <artifactId>financeiro-api</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <description>Projeto Financeiro Demo usando Apache Maven Demo</description>
+  <name>fProjeto Financeiro Demo</name>
 
-  <name>financeiro-api</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
